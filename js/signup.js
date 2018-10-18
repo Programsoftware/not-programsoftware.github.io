@@ -51,7 +51,7 @@ function login(){
 
 function signup(){
 
-    window.alert("works");
+   
 
     var userEmail = document.getElementById("email_field").value;
     var userPass = document.getElementById("password_field").value; 
