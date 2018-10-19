@@ -1,3 +1,6 @@
+function logout() {
+    firebase.auth().signOut()
+}
 
 firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
@@ -5,6 +8,7 @@ firebase.auth().onAuthStateChanged(function(user) {
 
       document.getElementById("user_div").style.display ="block";
       document.getElementById("login_div").style.display ="none";
+      document.getElementById("Register").style.display ="none";
 
       var user = firebase.auth().currentUser;
       
@@ -28,6 +32,7 @@ firebase.auth().onAuthStateChanged(function(user) {
 
       document.getElementById("user_div").style.display ="none";
       document.getElementById("login_div").style.display ="block";
+      document.getElementById("Register").style.display ="block";
 
     }
 
@@ -50,11 +55,20 @@ function login(){
 }
 
 function signup(){
-
    
+    var password = document.getElementById("Rpassword_field")
+  , confirm_password = document.getElementById("Rconfirm_field");
 
-    var userEmail = document.getElementById("email_field").value;
-    var userPass = document.getElementById("password_field").value; 
+
+  if(password.value != confirm_password.value) {
+   window.alert("Passwords Don't Match");
+  } else {
+    
+    document.getElementById("user_div").style.display ="block";
+    document.getElementById("login_div").style.display ="none";
+    document.getElementById("Register").style.display ="none";
+    var userEmail = document.getElementById("Remail_field").value;
+    var userPass = document.getElementById("Rpassword_field").value; 
 
     firebase.auth().createUserWithEmailAndPassword(userEmail, userPass).catch(function(error) {
         // Handle Errors here.
@@ -63,12 +77,9 @@ function signup(){
       
         window.alert("Error : " + errorMessage);
         // ...
-      });
+      });}
 }
 
-function logout() {
-    firebase.auth().signOut()
-}
 
 function send_verification() {
 
@@ -82,3 +93,10 @@ function send_verification() {
         window.alert("Error : " + error.message);
     });
 }   
+
+function show(nr) {
+    document.getElementById("table1").style.display="none";
+    document.getElementById("table2").style.display="none";
+    document.getElementById("table"+nr).style.display="block";
+}
+
