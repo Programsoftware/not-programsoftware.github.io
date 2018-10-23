@@ -30,3 +30,6 @@ firebase.auth().onAuthStateChanged(function(user) {
     }
 
   });
+function logout() {
+    firebase.auth().signOut()
+}
