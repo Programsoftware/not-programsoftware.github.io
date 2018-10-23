@@ -36,11 +36,13 @@
                 </div>
             </nav>
                   <div class="row mt-sm-4 mt-md-0">
-                <div class="col-sm-12 col-md-8 text-sm-center text-md-left">
-                    <h3>Pilonect offers a free alternative to get your commercial pilot license</h3>
-                    <p class="lead">The easiest way to achieve your license.</p>
-            
-                   </div>
+                   <div id="user_div" class="loggedin-div">
+                    <h3>Welcome User</h3>
+                    <p id="user_para">Welcome to pilonect. You are currently logged in.</p>
+                    <button class="btn btn-primary" onclick="logout()">logout</button>
+               
+                    <button id="verify_btn" class="btn btn-primary" onclick="send_verification()">Send Verification Email</button>
+                </div>
             
                 <div class="col-sm-12 col-md-4">
 
