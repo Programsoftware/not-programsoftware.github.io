@@ -10,7 +10,9 @@ function encodeAsFirebaseKey(string) {
       .replace(/\[/g, '%5B')
       .replace(/\]/g, '%5D');
   };
-  
+  function userpage() {
+      window.location="../profile.html"
+  }
 
 firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
