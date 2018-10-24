@@ -1,7 +1,27 @@
 function logout() {
     firebase.auth().signOut()
 }
+function encodeAsFirebaseKey(string) {
+    return string.replace(/\%/g, '%25')
+      .replace(/\./g, '%2E')
+      .replace(/\#/g, '%23')
+      .replace(/\$/g, '%24')
+      .replace(/\//g, '%2F')
+      .replace(/\[/g, '%5B')
+      .replace(/\]/g, '%5D');
+  };
+  
+function test() {
+    window.alert("works")
+    var firebaseRef = firebase.database().ref();
 
+    firebase.database().ref('users/' + "userEmail").set({
+        firstname: "firstname",
+        lastname: "lastname",
+        age: "age",
+        email: "userEmail"
+    });
+}
 firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
       // User is signed in.
@@ -58,10 +78,10 @@ function signup(){
    
     var password = document.getElementById("Rpassword_field")
   , confirm_password = document.getElementById("Rconfirm_field");
-    var firstname= document.getElementById("first_name");
-    var lastname= document.getElementById("last_name");
-    var age= document.getElementById("age");
-    var database = firebase.database();
+    var firstname= document.getElementById("first_name").value;
+    var lastname= document.getElementById("last_name").value;
+    var age= document.getElementById("age").value;
+    
     
   if(password.value != confirm_password.value) {
       
@@ -73,9 +93,18 @@ function signup(){
     var userPass = document.getElementById("Rpassword_field").value;
     
               
-      }if (age !="" && firstname !="" && lastname==""){
-          
-       firebase.auth().createUserWithEmailAndPassword(userEmail, userPass).catch(function(error) {
+      }if (age !="" && firstname !="" && lastname !=""){
+        
+       firebase.auth().createUserWithEmailAndPassword(userEmail, userPass).then(function(){
+           
+        firebase.database().ref('users/' + encodeAsFirebaseKey(userEmail)).set({
+            firstname: firstname,
+            lastname: lastname,
+            age: age,
+            email: userEmail
+        });
+    
+       }, (function(error) {
         // Handle Errors here.
         var errorCode = error.code;
         var errorMessage = error.message;
@@ -83,10 +112,12 @@ function signup(){
         window.alert("Error : " + errorMessage);
         // ...
        
-      });}
+      }));
+    }
       else{
         window.alert("Please fill in all the blanks!")
       }}
+
 
 
 function send_verification() {
