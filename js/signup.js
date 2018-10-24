@@ -11,17 +11,7 @@ function encodeAsFirebaseKey(string) {
       .replace(/\]/g, '%5D');
   };
   
-function test() {
-    window.alert("works")
-    var firebaseRef = firebase.database().ref();
 
-    firebase.database().ref('users/' + "userEmail").set({
-        firstname: "firstname",
-        lastname: "lastname",
-        age: "age",
-        email: "userEmail"
-    });
-}
 firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
       // User is signed in.
