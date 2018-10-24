@@ -58,22 +58,27 @@ function signup(){
    
     var password = document.getElementById("Rpassword_field")
   , confirm_password = document.getElementById("Rconfirm_field");
-
-
+    var firstname= document.getElementbyId("first_name");
+    var lastname= document.getElementbyId("last_name");
+    var age= document.getElementbyId("age");
+    var database = firebase.database();
   if(password.value != confirm_password.value) {
    window.alert("Passwords Don't Match");
   } else {
     
     var userEmail = document.getElementById("Remail_field").value;
-    var userPass = document.getElementById("Rpassword_field").value; 
-
-    firebase.auth().createUserWithEmailAndPassword(userEmail, userPass).catch(function(error) {
+    var userPass = document.getElementById("Rpassword_field").value;
+      if (age="" || firstname="" || lastname="" ||){
+      window.alert("Please fill in all the blanks!")
+      }else{
+       firebase.auth().createUserWithEmailAndPassword(userEmail, userPass).catch(function(error) {
         // Handle Errors here.
         var errorCode = error.code;
         var errorMessage = error.message;
       
         window.alert("Error : " + errorMessage);
         // ...
+       }
       });}
 }
 
