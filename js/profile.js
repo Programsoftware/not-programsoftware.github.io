@@ -39,3 +39,15 @@ function update() {
     
    
 }
+function send_verification() {
+
+  var user = firebase.auth().currentUser;
+
+  user.sendEmailVerification().then(function() {
+       // Email sent.
+       window.alert("Verification sent")
+  }).catch(function(error) {
+  // An error happened.
+      window.alert("Error : " + error.message);
+  });
+}   
