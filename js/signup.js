@@ -15,7 +15,7 @@ function encodeAsFirebaseKey(string) {
 firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
       // User is signed in.
-      window.location="../profile.html"
+      // window.location="../profile.html"
       
       document.getElementById("login_div").style.display ="none";
       document.getElementById("Register").style.display ="none";
