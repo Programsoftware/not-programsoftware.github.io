@@ -97,3 +97,10 @@ function show(nr) {
     document.getElementById("table"+nr).style.display="block";
 }
 
+var input = document.getElementById("password_field");
+input.addEventListener("keyup", function(event) {
+    event.preventDefault();
+    if (event.keyCode === 13) {
+        document.getElementById("lgbtn").click();
+    }
+});
