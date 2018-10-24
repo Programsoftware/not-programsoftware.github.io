@@ -34,5 +34,8 @@ function logout() {
     firebase.auth().signOut()
 }
 function update() {
+   var first_name = document.getElementbyId("first_name").value;
+   var last_name = document.getElementbyId("last_name").value;
     
+   
 }
