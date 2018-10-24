@@ -78,8 +78,8 @@ function signup(){
       
         window.alert("Error : " + errorMessage);
         // ...
-       }
-      });}
+       
+      });}}
 }
 
 
