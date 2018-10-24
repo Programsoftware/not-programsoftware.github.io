@@ -68,7 +68,7 @@ function signup(){
     
     var userEmail = document.getElementById("Remail_field").value;
     var userPass = document.getElementById("Rpassword_field").value;
-      if (age="" || firstname="" || lastname=""){
+      if (age=="" || firstname=="" || lastname==""){
       window.alert("Please fill in all the blanks!")
       }else{
        firebase.auth().createUserWithEmailAndPassword(userEmail, userPass).catch(function(error) {
