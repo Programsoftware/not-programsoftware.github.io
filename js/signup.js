@@ -64,9 +64,6 @@ function signup(){
    window.alert("Passwords Don't Match");
   } else {
     
-    document.getElementById("user_div").style.display ="block";
-    document.getElementById("login_div").style.display ="none";
-    document.getElementById("Register").style.display ="none";
     var userEmail = document.getElementById("Remail_field").value;
     var userPass = document.getElementById("Rpassword_field").value; 
 
