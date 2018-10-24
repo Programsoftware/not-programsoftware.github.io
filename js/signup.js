@@ -71,12 +71,9 @@ function signup(){
     
     var userEmail = document.getElementById("Remail_field").value;
     var userPass = document.getElementById("Rpassword_field").value;
-      
-      if (age=="" || firstname=="" || lastname==""){
-          
-      window.alert("Please fill in all the blanks!")
-          
-      }else{
+    
+              
+      }if (age !="" && firstname !="" && lastname==""){
           
        firebase.auth().createUserWithEmailAndPassword(userEmail, userPass).catch(function(error) {
         // Handle Errors here.
@@ -86,8 +83,10 @@ function signup(){
         window.alert("Error : " + errorMessage);
         // ...
        
-      });}}
-}
+      });}
+      else{
+        window.alert("Please fill in all the blanks!")
+      }}
 
 
 function send_verification() {
