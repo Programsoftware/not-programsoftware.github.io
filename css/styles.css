@@ -1,6 +1,8 @@
 span {
   text-shadow: 0ch; }
-
+.userdiv{
+display:none;
+}
 .jumbotron {
   margin-bottom: 0px;
   background-image: url(../img/plane.jpg);
