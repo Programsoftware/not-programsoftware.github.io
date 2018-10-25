@@ -36,7 +36,15 @@ function logout() {
 function update() {
    var first_name = document.getElementbyId("first_name").value;
    var last_name = document.getElementbyId("last_name").value;
-    
+       var email = document.getElementbyId("email").value;
+       var age = document.getElementbyId("age").value;
+   database.ref('/users/' + encodeAsFirebaseKey(email_id)).update({
+    firstname:first_name,
+    lastname:last_name
+    email:email,
+    age:age
+   });
+
    
 }
 function send_verification() {
