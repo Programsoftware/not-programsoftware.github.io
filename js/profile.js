@@ -10,8 +10,8 @@ function encodeAsFirebaseKey(string) {
 $(document).ready(function(){
 
     var rootRef=firebase.database().ref().child("users");
-    
-    rootRef.on(encodeAsFirebaseKey(firebase.auth().currentUser), snap => {
+    var userEmail = firebase.auth().currentUser.email
+    rootRef.on(encodeAsFirebaseKey(userEmail), snap => {
         var firstname = snap.child("firstname").val();
         var lastname = snap.child("lastname").val();
         var email = snap.child("email").val();
