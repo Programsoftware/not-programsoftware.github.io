@@ -12,7 +12,12 @@ $(document).ready(function(){
     var rootRef=firebase.database().ref().child("users");
     
     rootRef.on("child_added", snap => {
-    alert(snap.val{});
+        var firstname = snap.child("firstname").val();
+        var lastname = snap.child("lastname").val();
+        var email = snap.child("email").val();
+        var age = snap.child("age").val();
+        
+        
     }
 });
 firebase.auth().onAuthStateChanged(function(user) {
