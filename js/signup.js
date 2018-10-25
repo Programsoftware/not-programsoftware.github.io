@@ -43,7 +43,7 @@ firebase.auth().onAuthStateChanged(function(user) {
       // No user is signed in.
 
             window.alert(" not signed in")
-
+      document.getElementById("goto").style.display="none";
       document.getElementById("login_div").style.display ="block";
       document.getElementById("Register").style.display ="block";
 
