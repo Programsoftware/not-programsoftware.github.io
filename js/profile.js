@@ -20,7 +20,7 @@ $(document).ready(function(){
         var ageI= document.getElementById("age");
         var lastnameI= document.getElementById("last_name");
         var firstnameI= document.getElementById("first_name");
-        var emailI= document.getElemetById("email");
+        var emailI= document.getElementById("email");
         
         ageI.value=age;
         lastnameI.value=lastname;
