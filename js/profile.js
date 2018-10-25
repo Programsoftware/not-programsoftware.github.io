@@ -44,6 +44,7 @@ function logout() {
     firebase.auth().signOut()
 }
 function update() {
+    window.alert("Updated!")
    var first_name = document.getElementbyId("first_name").value;
    var last_name = document.getElementbyId("last_name").value;
        var email = document.getElementbyId("email").value;
