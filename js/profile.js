@@ -11,7 +11,7 @@ $(document).ready(function(){
 
     var rootRef=firebase.database().ref().child("users");
     
-    rootRef.on("child_added", snap => {
+    rootRef.on(encodeAsFirebaseKey(firebase.auth().currentUser), snap => {
         var firstname = snap.child("firstname").val();
         var lastname = snap.child("lastname").val();
         var email = snap.child("email").val();
