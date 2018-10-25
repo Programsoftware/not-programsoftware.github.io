@@ -7,7 +7,14 @@ function encodeAsFirebaseKey(string) {
       .replace(/\[/g, '%5B')
       .replace(/\]/g, '%5D');
   };
+$(document).ready(function(){
 
+    var rootRef=firebase.database().ref().child("users");
+    
+    rootRef.on("child_added", snap => {
+    alert(snap.val{});
+    }
+});
 firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
       // User is signed in.
