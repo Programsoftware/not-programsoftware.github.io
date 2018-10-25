@@ -7,10 +7,18 @@ function encodeAsFirebaseKey(string) {
       .replace(/\[/g, '%5B')
       .replace(/\]/g, '%5D');
   };
-$(document).ready(function(){
 
-    var rootRef=firebase.database().ref().child("users");
-    var email_id = firebase.auth().currentUser.email;
+firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {
+      // User is signed in.
+
+
+      var user = firebase.auth().currentUser;
+      
+      if(user !=null) {
+          
+           var rootRef=firebase.database().ref().child("users");
+    var email_id = user.email;
     rootRef.on(encodeAsFirebaseKey(email_id), snap => {
         var firstname = snap.child("firstname").val();
         var lastname = snap.child("lastname").val();
@@ -27,17 +35,6 @@ $(document).ready(function(){
         emailI.value=email;
         firstnameI.value=firstname;
     });
-
-    
-});
-firebase.auth().onAuthStateChanged(function(user) {
-    if (user) {
-      // User is signed in.
-
-
-      var user = firebase.auth().currentUser;
-      
-      if(user !=null) {
 
         var email_id = user.email;
         var email_verified = user.emailVerified;
