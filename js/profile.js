@@ -16,7 +16,7 @@ $(document).ready(function(){
         var lastname = snap.child("lastname").val();
         var email = snap.child("email").val();
         var age = snap.child("age").val();
-        
+    });
         var ageI= document.getElementById("age");
         var lastnameI= document.getElementById("last_name");
         var firstnameI= document.getElementById("first_name");
@@ -26,7 +26,7 @@ $(document).ready(function(){
         lastnameI.value=lastname;
         emailI.value=email;
         firstnameI.value=firstname;
-    }
+    
 });
 firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
