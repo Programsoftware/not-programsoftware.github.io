@@ -50,7 +50,7 @@ function update() {
        var email = document.getElementById("email").value;
        var age = document.getElementById("age").value;
      var email_id = firebase.auth().currentUser.email;
-   firebase.database.ref('/users/' + encodeAsFirebaseKey(email_id)).update({
+   firebase.database().ref('/users/' + encodeAsFirebaseKey(email_id)).update({
     firstname:first_name,
     lastname:last_name,
     email:email,
