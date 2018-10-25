@@ -17,7 +17,15 @@ $(document).ready(function(){
         var email = snap.child("email").val();
         var age = snap.child("age").val();
         
+        var ageI= document.getElementById("age");
+        var lastnameI= document.getElementById("last_name");
+        var firstnameI= document.getElementById("first_name");
+        var emailI= document.getElemetById("email");
         
+        ageI.value=age;
+        lastnameI.value=lastname;
+        emailI.value=email;
+        firstnameI.value=firstname;
     }
 });
 firebase.auth().onAuthStateChanged(function(user) {
