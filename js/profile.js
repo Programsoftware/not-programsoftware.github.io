@@ -40,7 +40,7 @@ function update() {
        var age = document.getElementbyId("age").value;
    database.ref('/users/' + encodeAsFirebaseKey(email_id)).update({
     firstname:first_name,
-    lastname:last_name
+    lastname:last_name,
     email:email,
     age:age
    });
