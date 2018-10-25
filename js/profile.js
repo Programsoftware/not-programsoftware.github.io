@@ -45,10 +45,10 @@ function logout() {
 }
 function update() {
     window.alert("Updated!");
-   var first_name = document.getElementbyId("first_name").value;
-   var last_name = document.getElementbyId("last_name").value;
-       var email = document.getElementbyId("email").value;
-       var age = document.getElementbyId("age").value;
+   var first_name = document.getElementById("first_name").value;
+   var last_name = document.getElementById("last_name").value;
+       var email = document.getElementById("email").value;
+       var age = document.getElementById("age").value;
    database.ref('/users/' + encodeAsFirebaseKey(email_id)).update({
     firstname:first_name,
     lastname:last_name,
