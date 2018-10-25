@@ -49,7 +49,7 @@ function update() {
    var last_name = document.getElementById("last_name").value;
        var email = document.getElementById("email").value;
        var age = document.getElementById("age").value;
-   database.ref('/users/' + encodeAsFirebaseKey(email_id)).update({
+   firebase.database.ref('/users/' + encodeAsFirebaseKey(email_id)).update({
     firstname:first_name,
     lastname:last_name,
     email:email,
