@@ -17,7 +17,6 @@ function encodeAsFirebaseKey(string) {
 firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
       // User is signed in.
-      window.alert("signed in")
       document.getElementById("goto").style.display="block";
       document.getElementById("login_div").style.display ="none";
       document.getElementById("Register").style.display ="none";
@@ -42,7 +41,6 @@ firebase.auth().onAuthStateChanged(function(user) {
     } else {
       // No user is signed in.
 
-            window.alert(" not signed in")
       document.getElementById("goto").style.display="none";
       document.getElementById("login_div").style.display ="block";
       document.getElementById("Register").style.display ="block";
