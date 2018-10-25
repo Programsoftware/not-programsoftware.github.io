@@ -2,6 +2,11 @@ span {
   text-shadow: 0ch; }
 #goto {
 display:none;
+    text-align: center;
+    max-width: 38%;
+    padding: 50px 70px 70px 70px;
+    margin: 10px auto 30px;
+    width: 50%; 
 }
 .jumbotron {
   margin-bottom: 0px;
