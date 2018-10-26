@@ -1,6 +1,6 @@
 function forgot(){
   var auth = firebase.auth();
-  var emailAddress = document.getElementById("email_field");
+  var emailAddress = document.getElementById("email_field").value;
 
 auth.sendPasswordResetEmail(emailAddress).then(function() {
   // Email sent.
@@ -8,6 +8,7 @@ auth.sendPasswordResetEmail(emailAddress).then(function() {
   window.location="signup.html"
 }).catch(function(error) {
   // An error happened.
+  window.alert("Error : " + error.message);
 });
 
 }
