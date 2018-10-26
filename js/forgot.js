@@ -1,6 +1,6 @@
 function forgot(){
   var auth = firebase.auth();
-  var emailAddress = getDocumentElementById("email_field");
+  var emailAddress = document.getElementById("email_field");
 
 auth.sendPasswordResetEmail(emailAddress).then(function() {
   // Email sent.
