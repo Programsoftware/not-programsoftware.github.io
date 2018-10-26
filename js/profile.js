@@ -16,14 +16,14 @@ firebase.auth().onAuthStateChanged(function(user) {
       var user = firebase.auth().currentUser;
       
       if(user !=null) {
-          
-           var rootRef=firebase.database().ref().child("users");
-    var email_id = user.email;
-    rootRef.on(encodeAsFirebaseKey(email_id), snap => {
-        var firstname = snap.child("firstname").val();
-        var lastname = snap.child("lastname").val();
-        var email = snap.child("email").val();
-        var age = snap.child("age").val();
+          var email_id = user.email;
+           var rootRef=firebase.database().ref("users/"+encodeAsFirebaseKey(email_id));
+    
+    rootRef.once('value').then(function(snapshot) {
+        var firstname = snapshot.val().firstname;
+        var lastname = snapshot.val().lastname;
+        var email = snapshot.val().email;
+        var age = snapshot.val().age;
         
         var ageI= document.getElementById("age");
         var lastnameI= document.getElementById("last_name");
