@@ -8,6 +8,9 @@ display:none;
     margin: 10px auto 30px;
     width: 50%; 
 }
+.card{
+  color:black;
+}
 body {
     height: 100%;
     width: 100%;
