@@ -11,6 +11,12 @@ display:none;
 .card{
   color:black;
 }
+.sideright{
+    
+    padding: 50px 70px 70px 70px;
+    margin: 10px auto 30px;
+    width: 50%;
+}
 body {
     height: 100%;
     width: 100%;
