@@ -1,5 +1,7 @@
 $(document).ready(function(){
-        $('.login-form .tables .table .panel .panelhead').on('click', function(){
+        $('.login-form .panelhead').on('click', function(){
+            $('.panelhead.active').removeClass('active');
+            $(this).addClass('active');
         var currenttable = $(this).attr('id');
             $('.login-form .tables .table.active').stop().slideUp(300, function(){
             $(this).removeClass('active');
