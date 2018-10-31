@@ -8,9 +8,15 @@ display:none;
     margin: 10px auto 30px;
     width: 50%; 
 }
-.card{
+#profilecard{
   color:black;
+  background: #ffffff none repeat scroll 0 0;
+  border-radius: 2px;
+  margin: 10px auto 30px;
+  padding: 50px 70px 70px 71px;
+  width: 70%;
 }
+
 .sideright{
     
     padding: 50px 70px 70px 70px;
@@ -85,6 +91,7 @@ body {
   .form-control {
     margin-bottom:10px;
   }
+  
   .loggedin-div {
     background: #ffffff none repeat scroll 0 0;
     border-radius: 2px;
@@ -100,18 +107,24 @@ body {
 #profile{
 display:block;
 }
-
+.profilediv{
+  background-color:light ;
+  width: 100%;
+  margin-left: 50px;
+  padding: 10px 0px 0px 71px;
+}
 /* The sidebar menu */
 .sidenav {
     height: 100%; /* Full-height: remove this if you want "auto" height */
-    width: 160px; /* Set the width of the sidebar */
+    width: 250px; /* Set the width of the sidebar */
     position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-    z-index: 1; /* Stay on top */
+    
     top: 0; /* Stay at the top */
     left: 0;
-    background-color: #111; /* Black */
+    background-color: white;
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 20px;
+    padding-right:20px;
 }
 
 /* The navigation menu links */
@@ -119,7 +132,7 @@ display:block;
     padding: 6px 8px 6px 16px;
     font-size: 25px;
     display: block;
-    color:white;
+    color:black;
 }
 
 /* When you mouse over the navigation links, change their color */
