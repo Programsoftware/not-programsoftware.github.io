@@ -16,7 +16,15 @@ display:none;
   padding: 10px 10px 10px 11px;
   width: 70%;
 }
+.tables{
+  color:black;
+  background: #ffffff none repeat scroll 0 0;
+  border-radius: 2px;
+  margin: 10px auto 30px;
+  padding: 10px 10px 10px 11px;
+  width: 80%;
 
+}
 .sideright{
     
     padding: 50px 70px 70px 70px;
@@ -91,6 +99,15 @@ body {
   .form-control {
     margin-bottom:10px;
   }
+  #login-div{
+    color:black;
+    background: #ffffff none repeat scroll 0 0;
+    border-radius: 2px;
+    margin: 10px auto 30px;
+    padding: 10px 10px 10px 11px;
+    width: 70%;
+}
+
   
   .loggedin-div {
     background: #ffffff none repeat scroll 0 0;
