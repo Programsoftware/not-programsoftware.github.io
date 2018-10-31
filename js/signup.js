@@ -1,3 +1,17 @@
+$(document).ready(function(){
+        $('.login-form .tables .table .panel .panelhead').on('click', function(){
+        var currenttable = $(this).attr('id');
+            $('.login-form .tables .table.active').stop().slideUp(300, function(){
+            $(this).removeClass('active');
+            $('#-'+currenttable).slideDown(300, function(){
+            $(this).addClass('active');
+            });
+        });
+    });
+         
+
+});
+
 function logout() {
     firebase.auth().signOut()
 }
