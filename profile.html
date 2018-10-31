@@ -9,62 +9,113 @@
         <link rel='stylesheet' href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="../css/bootstrap.css">
         <link rel="stylesheet" href="../css/styles.css">
+        <link rel="stylesheet" href="../css/animate.css">
+        <link rel="stylesheet" href="../css/backgroundanimation.css">
     </head>
 
     <body>
-
-       <div class="container">
+            <div id="sidebar" class="sidenav">
+                    <a href="index.html" class="navbar-brand">
+                    <img src="../img/wlogo.jpg" style="width:200px;">
+                    </a>
+                  <a href="profile.html">My profile</a>
+                  <a href="index.html">Home</a>
+                  <a href="post.html">View posts from other pilots</a> 
+                  <button style="margin-left: 10px;" class="btn btn-primary" onclick="logout()">logout</button>
+                   </div>
+             <div class="container fadeIn animated">
 	       
-	       <div id="sidebar" class="sidenav bg-primary  text-white">
-	        <a href="profile.html">My profile</a>
-  		<a href="index.html">Home</a>
-  		<a href="post.html">View posts from other pilots</a> 
-	       </div>
-              
+	      
              
 		
-                  <div class="row mt-sm-4 mt-md-0">
-                   <div id="profile" class="loggedin-div text-dark">
-                    <h3>Welcome User</h3>
-                    <p id="user_para">Welcome to pilonect. You are currently logged in.</p>
-                    <button class="btn btn-primary" onclick="logout()">logout</button>
+            <div class="row mt-sm-4 mt-md-0 mr-auto">
+                   <div id="profile" class="profilediv">
+                        
+                        <div class="jumbotron">
+                                <h1 id="welcome">Welcome </h1>
+                                <p class="lead">This is a your profile, where you can edit your information.</p>
+                                <hr class="my-4">
+                                <div class="clouds">
+            
+                                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="762px"
+                                        height="331px" viewBox="0 0 762 331" enable-background="new 0 0 762 331" xml:space="preserve" class="cloud big front slowest">
+                                        <path fill="#FFFFFF" d="M715.394,228h-16.595c0.79-5.219,1.201-10.562,1.201-16c0-58.542-47.458-106-106-106
+                                        c-8.198,0-16.178,0.932-23.841,2.693C548.279,45.434,488.199,0,417.5,0c-84.827,0-154.374,65.401-160.98,148.529
+                                        C245.15,143.684,232.639,141,219.5,141c-49.667,0-90.381,38.315-94.204,87H46.607C20.866,228,0,251.058,0,279.5
+                                        S20.866,331,46.607,331h668.787C741.133,331,762,307.942,762,279.5S741.133,228,715.394,228z"/>
+                                        </svg>
+                                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="762px"
+                                        height="331px" viewBox="0 0 762 331" enable-background="new 0 0 762 331" xml:space="preserve" class="cloud distant smaller">
+                                        <path fill="#FFFFFF" d="M715.394,228h-16.595c0.79-5.219,1.201-10.562,1.201-16c0-58.542-47.458-106-106-106
+                                        c-8.198,0-16.178,0.932-23.841,2.693C548.279,45.434,488.199,0,417.5,0c-84.827,0-154.374,65.401-160.98,148.529
+                                        C245.15,143.684,232.639,141,219.5,141c-49.667,0-90.381,38.315-94.204,87H46.607C20.866,228,0,251.058,0,279.5
+                                        S20.866,331,46.607,331h668.787C741.133,331,762,307.942,762,279.5S741.133,228,715.394,228z"/>
+                                        </svg>
+                                        
+                                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="762px"
+                                        height="331px" viewBox="0 0 762 331" enable-background="new 0 0 762 331" xml:space="preserve" class="cloud small slow">
+                                        <path fill="#FFFFFF" d="M715.394,228h-16.595c0.79-5.219,1.201-10.562,1.201-16c0-58.542-47.458-106-106-106
+                                        c-8.198,0-16.178,0.932-23.841,2.693C548.279,45.434,488.199,0,417.5,0c-84.827,0-154.374,65.401-160.98,148.529
+                                        C245.15,143.684,232.639,141,219.5,141c-49.667,0-90.381,38.315-94.204,87H46.607C20.866,228,0,251.058,0,279.5
+                                        S20.866,331,46.607,331h668.787C741.133,331,762,307.942,762,279.5S741.133,228,715.394,228z"/>
+                                        </svg>
+                                        
+                                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="762px"
+                                        height="331px" viewBox="0 0 762 331" enable-background="new 0 0 762 331" xml:space="preserve" class="cloud distant super-slow massive">
+                                        <path fill="#FFFFFF" d="M715.394,228h-16.595c0.79-5.219,1.201-10.562,1.201-16c0-58.542-47.458-106-106-106
+                                        c-8.198,0-16.178,0.932-23.841,2.693C548.279,45.434,488.199,0,417.5,0c-84.827,0-154.374,65.401-160.98,148.529
+                                        C245.15,143.684,232.639,141,219.5,141c-49.667,0-90.381,38.315-94.204,87H46.607C20.866,228,0,251.058,0,279.5
+                                        S20.866,331,46.607,331h668.787C741.133,331,762,307.942,762,279.5S741.133,228,715.394,228z"/>
+                                        </svg>
+                                        
+                                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="762px"
+                                        height="331px" viewBox="0 0 762 331" enable-background="new 0 0 762 331" xml:space="preserve" class="cloud slower">
+                                        <path fill="#FFFFFF" d="M715.394,228h-16.595c0.79-5.219,1.201-10.562,1.201-16c0-58.542-47.458-106-106-106
+                                        c-8.198,0-16.178,0.932-23.841,2.693C548.279,45.434,488.199,0,417.5,0c-84.827,0-154.374,65.401-160.98,148.529
+                                        C245.15,143.684,232.639,141,219.5,141c-49.667,0-90.381,38.315-94.204,87H46.607C20.866,228,0,251.058,0,279.5
+                                        S20.866,331,46.607,331h668.787C741.133,331,762,307.942,762,279.5S741.133,228,715.394,228z"/>
+                                        </svg>
+                                        
+                                        </div>
+                         </div>
                		<br/>
 			<br/>
                     <button id="verify_btn" class="btn btn-primary" onclick="send_verification()">Send Verification Email</button>
-			     <label>First name</label>
-			    <input class="form-control" id="first_name" placeholder="First name">
-				<label>Last name</label>
-                            <input class="form-control" id="last_name" placeholder="Last name">
-			  <label>age</label>
-                            <input class="form-control" id="age" placeholder="age">
-			   <label>email</label>
+                    <div class="card" id="profilecard">
+                            <div class="card-body">
+                                    <h5 class="card-header">Your profile</h5>
+                                    <hr class="my-4">
+                 <label>First name</label>
+                 
+                    <input class="form-control" id="first_name" placeholder="First name">
+                    <hr class="my-4">
+                
+                <label>Last name</label>
+                
+                    <input class="form-control" id="last_name" placeholder="Last name">
+                    <hr class="my-4">
+
+                <label>age</label>
+                
+                    <input class="form-control" id="age" placeholder="age">
+                    <hr class="my-4">
+
+			    <label>email</label>
 			   
-                            <input class="form-control" id="email" placeholder="email">
+                    <input class="form-control" id="email" placeholder="email">
+                    <hr class="my-4">
 			   
-		            <button class="btn btn-primary" onclick="update()">Edit your information</button>
-			   
+                <button class="btn btn-primary" onclick="update()">Edit your information</button>
+                    </div>
+			   </div>
 			   <label>Want to be featured on the front page? Send us an email at: louis.wei.803@gmail.com</label>
 			   
                 </div>
             
-                <div class="col-sm-12 col-md-4">
-
-                        <h3 class="mb-4">Coming soon</h3>
                 
-                        <ul class="nav flex-column nav-pills">
-                            <li class="nav-item mb-2">
-                                <a class="nav-link active" href="scholarship.html">Scholarships</a>
-                            </li>
-                            <li class="nav-item mb-2">
-                                <a class="nav-link active" href="frontpage.html">Front page</a>
-                            </li>
-                            <li class="nav-item mb-2">
-                                <a class="nav-link active" href="job.html">Find a job now!</a>
-                            </li>
-                        </ul>
-                </div>
             </div>
         </div>
+        
         <script src="../js/jquery.min.js"></script>
         <script src="../js/popper.min.js"></script>
         <script src="../js/bootstrap.min.js"></script>
