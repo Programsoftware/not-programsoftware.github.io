@@ -101,9 +101,15 @@ body {
     width: 50%;    
     display:none
   }
-  #table2 {
-    display: none;
+
+.tables .table{
+  display:none;
 }
+.tables .table.active{
+  display:block;
+}
+
+
 #profile{
 display:block;
 }
@@ -157,4 +163,7 @@ display:block;
 }
 .navbar-brand{
   color:black;
+}
+.panelhead.active{
+  font-weight: 900;
 }
