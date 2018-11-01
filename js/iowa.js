@@ -29,7 +29,7 @@ while(rndnumbers[alea]){
 rndnumbers[alea]=true;
 vgrid[i][k]=alea;
 convertindexval=(i+1)*4-(4-(k+1));    
-$('#'+convertindexval).text(alea);
+$('#'+convertindexval).text(vgrid[i][k]);
 }
 }
 for (i =0; i<4; i++){
@@ -43,6 +43,7 @@ for (i =0; i<4; i++){
         
 }
 }
+
 $('.btn').on('click', function(){
     var currentid =parseInt($(this).attr('id'));
     var x=1;
@@ -120,41 +121,69 @@ $('.btn').on('click', function(){
 if(x>0 && grid[x-1][y]==-1){
     convertindexval=(x-1+1)*4-(4-(y+1));
     $('#'+convertindexval).removeClass('hide');
+    
+    $('#'+convertindexval).text(vgrid[x][y]);
     $(this).addClass('hide');
     grid[x-1][y]=grid[x][y];
-    grid[x][y]=-1;    
+    grid[x][y]=-1;
+    vgrid[x-1][y]=vgrid[x][y];
+    vgrid[x][y]=-1;
+    testgagnant();
+    
 }else if(x<3 && grid[x+1][y]==-1){    
     convertindexval=(x+1+1)*4-(4-(y+1));
     $('#'+convertindexval).removeClass('hide');
+
+    $('#'+convertindexval).text(vgrid[x][y]);    
     $(this).addClass('hide');
     grid[x+1][y]=grid[x][y];
     grid[x][y]=-1;
+    vgrid[x+1][y]=vgrid[x][y];
+    vgrid[x][y]=-1;
+    testgagnant();
 }else if(y<3 && grid[x][y+1]==-1){    
     convertindexval=(x+1)*4-(4-(y+1+1));
     $('#'+convertindexval).removeClass('hide');
+    $('#'+convertindexval).text(vgrid[x][y]);
     $(this).addClass('hide');
     grid[x][y+1]=grid[x][y];
     grid[x][y]=-1;
+    vgrid[x][y+1]=vgrid[x][y];
+    vgrid[x][y]=-1;
+    testgagnant();
+
 }else if(y>0 && grid[x][y-1]==-1){
     convertindexval=(x+1)*4-(4-(y));
     $('#'+convertindexval).removeClass('hide');
+    $('#'+convertindexval).text(vgrid[x][y]);    
     $(this).addClass('hide');
     grid[x][y-1]=grid[x][y];
     grid[x][y]=-1;
+    vgrid[x][y-1]=vgrid[x][y];
+    vgrid[x][y]=-1;
+    testgagnant();
+}
+function testgagnant(){
+    var i;
+    var k;
+    var a;
+    var score=0;
+    for (i =0; i<4; i++){
+        for (k =0; k<4; k++){
+            a++;
+    if(vgrid[k][i]==a){
+        score++;
+    }
 
+        }
+        }
+        if (score>=15){
+            alert('u win, press f5 to play again.');
+        } 
 }
 
 
 
-
 });
 
 });
-function getOffset(el) {
-
-    const rect = el.getBoundingClientRect();
-    return {
-      left: rect.left + window.scrollX,
-      top: rect.top + window.scrollY
-    };
-  }
