@@ -8,7 +8,12 @@ display:none;
     margin: 10px auto 30px;
     width: 50%; 
 }
-
+.lead{
+z-index=1;
+}
+.display-4{
+z-index=1;
+}
 #profilecard{
   color:black;
   background: #ffffff none repeat scroll 0 0;
