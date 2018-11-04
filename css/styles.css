@@ -8,17 +8,13 @@ display:none;
     margin: 10px auto 30px;
     width: 50%; 
 }
-.lead{
-z-index: 1;
-}
-.display-4{
-z-index: 1;
-}
+
 #profilecard{
   color:black;
   background: #ffffff none repeat scroll 0 0;
   border-radius: 2px;
   margin: 10px auto 30px;
+  margin-top:-15%;
   padding: 10px 10px 10px 11px;
   width: 70%;
 }
@@ -139,13 +135,13 @@ display:block;
 .profilediv{
   background-color:light ;
   width: 100%;
-  margin-left: 50px;
+  margin-left: 10%;
   padding: 10px 0px 0px 71px;
 }
 /* The sidebar menu */
 .sidenav {
     height: 100%; /* Full-height: remove this if you want "auto" height */
-    width: 250px; /* Set the width of the sidebar */
+    width: 18%; /* Set the width of the sidebar */
     position: fixed; /* Fixed Sidebar (stay in place on scroll) */
     
     top: 0; /* Stay at the top */
@@ -190,3 +186,11 @@ display:block;
 .panelhead.active{
   font-weight: 900;
 }
+
+.lead{
+z-index: 1;
+}
+.display-4{
+z-index: 1;
+}
+
