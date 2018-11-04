@@ -29,7 +29,8 @@ firebase.auth().onAuthStateChanged(function(user) {
         var lastnameI= document.getElementById("last_name");
         var firstnameI= document.getElementById("first_name");
         var emailI= document.getElementById("email");
-        
+        var profile= document.getElementById("welcome");
+        document.getElementById("welcome").innerHTML="Welcome "+ firstname ;
         ageI.value=age;
         lastnameI.value=lastname;
         emailI.value=email;
@@ -45,7 +46,7 @@ firebase.auth().onAuthStateChanged(function(user) {
 
             document.getElementById("verify_btn").style.display = "block";
         }
-        document.getElementById("user_para").innerHTML = "Welcome : " + email_id + "</br> Verified : " + email_verified;
+        
 
       }
 
