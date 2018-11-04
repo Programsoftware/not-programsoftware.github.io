@@ -8,6 +8,10 @@ display:none;
     margin: 10px auto 30px;
     width: 50%; 
 }
+.nav-link{
+    color: #007bff;'
+}
+
 #profilecard{
   color:black;
   background: #ffffff none repeat scroll 0 0;
