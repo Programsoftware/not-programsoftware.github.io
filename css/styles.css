@@ -149,9 +149,7 @@ display:block;
     padding-top: 20px;
     padding-right:20px;
 }
-.navbar-nav .open .dropdown-menu {
-    background-color:black;
-  }
+
 /* The navigation menu links */
 .sidenav a {
     padding: 6px 8px 6px 16px;
