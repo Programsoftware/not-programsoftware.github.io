@@ -164,9 +164,9 @@ if(x>0 && grid[x-1][y]==-1){
     testgagnant();
 }
 function testgagnant(){
-    var i;
-    var k;
-    var a;
+    var i=0;
+    var k=0;
+    var a=0;
     var score=0;
     for (i =0; i<4; i++){
         for (k =0; k<4; k++){
@@ -177,6 +177,7 @@ function testgagnant(){
 
         }
         }
+        
         if (score>=15){
             alert('u win, press f5 to play again.');
         } 
