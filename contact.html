@@ -8,18 +8,36 @@
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,800">
         <link rel='stylesheet' href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="../css/bootstrap.css">
+        <link rel="stylesheet" href="./css/bootstrap.css">
         <style>
+			.container{
+				margin-top:10%;
+				margin-left:10%;
+				margin-bottom:10%;
+			}
             button{
                 width:150px;
                 height:150px;
-                font-size:10em;
             }
             .hide{
                 background: transparent;
                 border: none !important;
                 font-size:0;
             }
+			#mix{
+				width:500px;
+                height:150px;
+				margin-left:70px;
+				margin-top:100px;
+				font-size:3em;
+			}
+			#AI{
+			width:500px;
+                height:150px;
+				margin-left:70px;
+				margin-top:100px;
+				font-size:3em;
+			}
         </style>
        
     </head>
@@ -27,6 +45,8 @@
     <body>
 
        <div class="container">
+	   <div class="row">
+		<div class="column" id="iowatd">		
            <div class="row">
            <button id="1" class="btn btn-outline-secondary"></button>
            <button id="2" class="btn btn-outline-secondary"></button>
@@ -51,11 +71,21 @@
            <button id="15" class="btn btn-outline-secondary"></button>
            <button id="16" class="btn btn-outline-secondary"></button>
            </div>
-        </div>
-        <script src="../js/jquery.min.js"></script>
-        <script src="../js/popper.min.js"></script>
-        <script src="../js/bootstrap.min.js"></script>
-        <script src="../js/iowa.js"></script>
+		</div>
+		<div class="column">
+		<div class="row">
+			<button id="mix" class="btn btn-outline-secondary">Mix the board</button>
+			</div>
+			<div class="row">
+			<button id="AI" class="btn btn-outline-secondary">Computer</button>
+			</div>
+		<div>
+		</div>
+       </div>
+        <script src="./js/jquery.min.js"></script>
+        <script src="./js/popper.min.js"></script>
+        <script src="./js/bootstrap.min.js"></script>
+        <script src="./js/iowa.js"></script>
     </body>
 </html>
 
