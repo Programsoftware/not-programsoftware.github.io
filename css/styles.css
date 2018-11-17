@@ -149,10 +149,10 @@ display:block;
     
     top: 0; /* Stay at the top */
     left: 0;
-    background-color: rgba(0, 0, 0, 0.03);
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 20px;
     padding-right:20px;
+    background-color: white;
 }
 
 /* The navigation menu links */
@@ -196,4 +196,3 @@ z-index: 1;
 .display-4{
 z-index: 1;
 }
-
