@@ -12,15 +12,19 @@
         <link rel="stylesheet" href="../css/animate.css">
     </head>
 
-    <body  style="background-color: rgba(0, 0, 0, 0.01);">
+    <body  style="background-color: rgba(0, 0, 0, 0.02);">
 
        <div class="container fadeIn animated">
 	       
-	       <div id="sidebar" class="sidenav">
-	        <a href="profile.html">My profile</a>
-  		<a href="index.html">Home</a>
-  		<a href="post.html">View posts from other pilots</a> 
-	       </div>
+        <div id="sidebar" class="sidenav">
+            <a href="index.html" class="navbar-brand">
+            <img src="../img/wlogo.jpg" style="width:200px;">
+            </a>
+          <a href="profile.html">My profile</a>
+          <a href="index.html">Home</a>
+          <a href="post.html">View posts from other pilots</a> 
+          <button style="margin-left: 10px;" class="btn btn-primary" onclick="logout()">logout</button>
+           </div>
 	       <div class="sideright">
             <p id="postmsg">Please verify your email to post on the website</p>
 	       <div class="mb-4" id="inputpost">               
