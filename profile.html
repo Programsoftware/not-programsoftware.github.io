@@ -13,11 +13,11 @@
         <link rel="stylesheet" href="../css/backgroundanimation.css">
     </head>
 
-    <body>
+    <body  style="background-color: rgba(0, 0, 0, 0.01);">
             <div id="sidebar" class="sidenav">
-                    
-                    <img src="../img/wlogo.jpg" href="index.html" style="width:200px;">
-                    
+                    <a href="index.html" class="navbar-brand">
+                    <img src="../img/wlogo.jpg" style="width:200px;">
+                    </a>
                   <a href="profile.html">My profile</a>
                   <a href="index.html">Home</a>
                   <a href="post.html">View posts from other pilots</a> 
@@ -32,7 +32,7 @@
                    <div id="profile" class="profilediv">
                         
                         <div class="jumbotron">
-                                <h1 id="welcome" class="display-4">Welcome </h1>
+                                <h1 id="welcome">Welcome </h1>
                                 <p class="lead">This is a your profile, where you can edit your information.</p>
                                 <hr class="my-4">
                                 <div class="clouds">
@@ -80,6 +80,7 @@
                          </div>
                		<br/>
 			<br/>
+                    <button id="verify_btn" class="btn btn-primary" onclick="send_verification()">Send Verification Email</button>
                     <div class="card" id="profilecard">
                             <div class="card-body">
                                     <h5 class="card-header">Your profile</h5>
@@ -110,8 +111,6 @@
             </div>
                <hr class="my-4">
                 <button class="btn btn-primary" onclick="update()">Edit your information</button>
-				    
-                    <button id="verify_btn" class="btn btn-primary" onclick="send_verification()">Send Verification Email</button>
                     </div>
                </div>
 			   <label>Want to be featured on the front page? Send us an email at: louis.wei.803@gmail.com</label>
