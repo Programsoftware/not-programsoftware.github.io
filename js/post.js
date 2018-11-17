@@ -10,7 +10,7 @@ function encodeAsFirebaseKey(string) {
       .replace(/\[/g, '%5B')
       .replace(/\]/g, '%5D');
   };
-var name;
+
 
 var postamount2;
 var postid2 = firebase.database().ref("post/"); 
@@ -24,9 +24,11 @@ $('#postbtn').on('click', function(){
 
     var rootRef2=firebase.database().ref("users/"+encodeAsFirebaseKey(email_id));
       rootRef2.once('value').then(function(snapshot) {
+        var name;
         var firstname = snapshot.val().firstname;
         var lastname = snapshot.val().lastname;
         name = firstname+" "+lastname;
+          alert(name);
     });
     if (postval!=""){
         var newamount = postamount2+1
