@@ -27,7 +27,6 @@ $('#postbtn').on('click', function(){
         var firstname = snapshot.val().firstname;
         var lastname = snapshot.val().lastname;
         name = firstname+" "+lastname;
-          alert(name);
     });
     if (postval!=""){
         var newamount = postamount2+1
