@@ -1,0 +1,27 @@
+
+  body {
+      height: 100%;
+      width: 100%;
+      background-image:url(../img/back.jpg);
+      background-position: top; /* Center the image */
+      background-repeat: no-repeat; /* Do not repeat the image */
+      background-size:cover;
+
+       font-family:tahoma;
+  }
+  
+  .jumbotron {
+    background-color:transparent;
+  }
+  .mypage{
+    margin-left:20%;
+    margin-top:10%;
+  }
+  .container{
+    margin-top:5%;
+  }
+  .card-text{
+    text-align: justify;
+    font-family: arial;
+    font-size: 2rem;
+  }
