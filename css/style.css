@@ -2,7 +2,7 @@
   body {
       height: 100%;
       width: 100%;
-      background-image:url(../img/back.jpg);
+      background-image:url(../../img/back.jpg);
       background-position: top; /* Center the image */
       background-repeat: no-repeat; /* Do not repeat the image */
       background-size:cover;
